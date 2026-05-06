@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Nokia Snake</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="phone-container">
+        <div class="phone-top">
+            <div class="speaker"></div>
+            <div class="brand">NOKIA</div>
+        </div>
+        
+        <div class="screen-bezel">
+            <div class="screen">
+                <div class="ui-header">
+                    <span id="scoreDisplay">SCORE: 0</span>
+                    <span id="highScoreDisplay">HI: 0</span>
+                </div>
+                <canvas id="gameCanvas" width="200" height="200"></canvas>
+                <div id="gameOverScreen" class="overlay hidden">
+                    <p>GAME OVER</p>
+                    <p class="blink">Press 5 to Restart</p>
+                </div>
+                <div id="startScreen" class="overlay">
+                    <p>SNAKE</p>
+                    <p class="blink">Press 5 to Start</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="keypad">
+            <div class="row keys-function">
+                <button class="key func-key" id="btn-left-func">-</button>
+                <button class="key nav-key" id="btn-up" data-key="ArrowUp">▲</button>
+                <button class="key func-key" id="btn-right-func">-</button>
+            </div>
+            <div class="row">
+                <button class="key num-key" data-key="1">1</button>
+                <button class="key num-key" id="btn-2" data-key="ArrowUp">2<br><span>abc</span></button>
+                <button class="key num-key" data-key="3">3<br><span>def</span></button>
+            </div>
+            <div class="row">
+                <button class="key num-key" id="btn-4" data-key="ArrowLeft">4<br><span>ghi</span></button>
+                <button class="key num-key" id="btn-5" data-key="Enter">5<br><span>jkl</span></button>
+                <button class="key num-key" id="btn-6" data-key="ArrowRight">6<br><span>mno</span></button>
+            </div>
+            <div class="row">
+                <button class="key num-key" data-key="7">7<br><span>pqrs</span></button>
+                <button class="key num-key" id="btn-8" data-key="ArrowDown">8<br><span>tuv</span></button>
+                <button class="key num-key" data-key="9">9<br><span>wxyz</span></button>
+            </div>
+            <div class="row">
+                <button class="key num-key" data-key="*">*</button>
+                <button class="key num-key" data-key="0">0</button>
+                <button class="key num-key" data-key="#">#</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
